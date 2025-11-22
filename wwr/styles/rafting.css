@@ -19,19 +19,33 @@ body {
     color: var(--accent1-color);
 }
 
+/* Estrutura */
 header, main, footer {
     max-width: 840px;
     margin: 0 auto;
 }
 
+/* Títulos */
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
     width: 100%;
 }
 
+/* Usando a secondary-color */
+nav {
+    background-color: var(--secondary-color);
+}
+
 nav, p, article {
     margin: 16px;
+    padding: 8px;
+}
+
+/* Links do menu */
+nav a {
+    color: white;
+    text-decoration: none;
     padding: 8px;
 }
 
@@ -43,7 +57,7 @@ nav, p, article {
     width: 30px;
     height: 30px;
     margin: 10px;
-}
+    }
 
 .hero {
     position: relative;
@@ -55,7 +69,7 @@ nav, p, article {
     height: auto;
 }
 
-h1 {
+.hero h1 {
     position: absolute;
     top: 20px;
     width: 100%;
@@ -66,7 +80,7 @@ h1 {
     color: #fff;
 }
 
-article {
+.hero article {
     position: absolute;
     top: 305px;
     width: 96%;
@@ -77,6 +91,7 @@ article {
     background-color: rgb(10 34 57 / 70%);
 }
 
+/* Imagem dentro do article*/
 .hero article img {
     width: 200px;
     height: auto;
@@ -93,10 +108,12 @@ h2 {
     color: #fff;
 }
 
+/* header */
 section {
     margin-top: 30px;
 }
 
+/* logo */
 header img {
     width: 150px;
     height: 150px;
