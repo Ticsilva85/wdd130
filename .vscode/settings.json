@@ -8,11 +8,12 @@
   "editor.defaultFormatter": "vscode.html-language-features",
   "editor.minimap.enabled": false,
   "editor.linkedEditing": true,
- 
+  
   "editor.quickSuggestions": {
     "comments": "off",
     "strings": "off",
     "other": "on"
+  
   },
   "editor.parameterHints.enabled": false,
   "editor.suggestOnTriggerCharacters": false,
@@ -43,4 +44,5 @@
   "fiveServer.port": 5501,
   "fiveServer.injectBody": false,
   "liveServer.settings.port": 5504
+
 }
