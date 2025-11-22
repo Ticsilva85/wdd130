@@ -19,20 +19,20 @@ body {
     color: var(--accent1-color);
 }
 
-/* Estrutura */
+/* estructure */
 header, main, footer {
     max-width: 840px;
     margin: 0 auto;
 }
 
-/* Títulos */
+/* Titles */
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
     width: 100%;
 }
 
-/* Usando a secondary-color */
+/* Using the secondary-color */
 nav {
     background-color: var(--secondary-color);
 }
@@ -42,7 +42,7 @@ nav, p, article {
     padding: 8px;
 }
 
-/* Links do menu */
+/* menu links */
 nav a {
     color: white;
     text-decoration: none;
@@ -58,6 +58,10 @@ nav a {
     height: 30px;
     margin: 10px;
     }
+
+a:hover {
+    color: var(--accent2-color);
+}
 
 .hero {
     position: relative;
@@ -91,7 +95,7 @@ nav a {
     background-color: rgb(10 34 57 / 70%);
 }
 
-/* Imagem dentro do article*/
+/* Image inside the article*/
 .hero article img {
     width: 200px;
     height: auto;
