@@ -35,15 +35,19 @@ h1, h2 {
 /* Using the secondary-color */
 nav {
     background-color: var(--secondary-color);
+    display: flex;
+    margin-bottom: 16px;
 }
 
-nav, p, article {
+p, article {
     margin: 16px;
     padding: 8px;
 }
 
 /* menu links */
 nav a {
+    flex: 1;
+    text-align: center;
     color: white;
     text-decoration: none;
     padding: 8px;
@@ -87,7 +91,7 @@ a:hover {
 
 .hero article {
     position: absolute;
-    top: 305px;
+    top: 330px;
     width: 96%;
     text-align: justify;
     padding: 5px 5px 0 5px;
