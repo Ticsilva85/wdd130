@@ -99,6 +99,202 @@ a:hover {
     color: var(--primary-color);
 }
 
+
+/* =========================================
+   6. MAIN
+========================================= */
+
+/* Google Maps image */
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.map iframe {
+    width: 330px;
+    height: 300px;
+    margin: 1rem;
+    margin-left: 0;
+    margin-right: 40px;
+}
+
+/* Form */
+fieldset {
+    border: none; /* Remove border from the form */
+}
+
+form {
+    width: 400px;
+    font-size: small;
+}
+
+.item1, .item2 {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: center;
+    gap: 10px;
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+.item1 {
+    margin-bottom: 10px;
+}
+
+.item2 {
+    margin-bottom: 15px;
+}
+
+.item1 input {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.item1 ::placeholder {
+    padding: 10px;
+}
+
+.msg {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 0;
+    padding: 0;
+}
+
+.msg label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+/* --- ROUND CHECKBOX --- */
+.msg input[type="checkbox"] {
+    appearance: none;         
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #333;
+    border-radius: 50%;       
+    margin-right: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* When selected - white background + black bullet point */
+.msg input[type="checkbox"]:checked {
+    background-color: white;
+    border-color: #333;
+}
+
+.msg input[type="checkbox"]:checked::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: black;      
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+.message {
+    display: grid;
+    grid-template-columns: auto;
+    margin-bottom: 2px;
+    gap: 2px;
+}
+
+.message ::placeholder {
+    padding-left: 6px;
+    padding-top: 2px;
+}
+
+.subscribe {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#subscribe {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+/* when selected: keep white background and black border */
+#subscribe:checked {
+    background-color: white;
+    border-color: black;
+}
+
+/* add check (✓) manually */
+#subscribe:checked::after {
+    content: "✓";
+    font-size: 10px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subscribe input {
+    margin-right: 5px;
+}
+
+button {
+    width: auto;
+    height: 30px;
+}
+
+/* employees profile */
+.employees {
+    border: 1px solid var(--accent1-color);
+    padding: 5px;
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.employees h2 {
+    font-family: var(--heading-font);
+    margin: 0;
+    text-align: center;
+}
+
+.employees img {
+    width: 150px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.name, .job {
+    text-align: center;
+    font-family: var(--body-font);
+    width: 100%;
+}
+
+.name {
+    font-size: large;
+    font-weight: bold;
+}
+
 /* =========================================
    6. SOCIAL MEDIA COMPONENT
 ========================================= */
