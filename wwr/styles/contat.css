@@ -271,9 +271,10 @@ button {
     flex-wrap: wrap;
 }
 
-.employees h1 {
+.employees h2 {
     font-family: var(--heading-font);
     margin: 0;
+    text-align: center;
 }
 
 .employees img {
