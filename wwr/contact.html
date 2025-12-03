@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact White Water Rafting</title>
-    <link rel="stylesheet" href="styles/rafting.css">
+    <link rel="stylesheet" href="styles/contat.css">
     <meta name="description" content="Contact White Water Rafting for questions, bookings, and adventure support.">
     <meta name="author" content="Tiago Cavalcante da Silva">
 </head>
@@ -22,11 +22,70 @@
     </header>
 
     <main>
-        <h1>White Water Rafting Company</h1>
-        <h2>123 Main River Street</h2>
-        <h2>Kolob, California</h2>
-        <h2>+1 999 999 9999</h2>
-        <h2>info@whitewater.com</h2>
+        <div class="address">
+            <h1>White Water Rafting Company</h1>
+            <h3>123 Main River Street</h3>
+            <h3>Kolob, California</h3>
+            <h3>+1 999 999 9999</h3>
+            <h3>info@whitewater.com</h3>
+        </div>
+
+        <div class="container">
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12895.186154046347!2d-112.11033345059586!3d36.09844748046191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1764636984971!5m2!1spt-BR!2sbr"
+                    width="600" height="450" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <form>
+                <fieldset>
+                    <div class="item1">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Write your name">
+                    </div>
+
+                    <div class="item1">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Write your email">
+                    </div>
+
+                    <div class="item2">
+                        <label for="msgpurpose">Message Purpose</label>
+                        <div class="msg">
+                            <label><input type="checkbox" id="msgpurpose" name="msgpurpose">General Inquiry</label>
+                            <label><input type="checkbox" id="msgpurpose" name="msgpurpose">Reservation Question</label>
+                            <label><input type="checkbox" id="msgpurpose" name="msgpurpose">Website Suggestion</label>
+                        </div>
+                    </div>
+
+                    <div class="message">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Type here"></textarea>
+
+                        <div class="subscribe">
+                            <label for="subscribe">
+                                <input type="checkbox" id="subscribe" name="subscribe">Please Subscribe me to the
+                                monthly
+                                newsletter</label>
+                        </div>
+
+                        <button type="submit">Get in touch!</button>
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="employees">
+            <h1>We are here to serve you!</h1>
+
+            <img src="images/employees/employee-1.jpg" alt="Rafting Guide and Lifeguard">
+            <img src="images/employees/employee-2.jpg" alt="Equipment staff Leader">
+            <img src="images/employees/employee-3.jpg" alt="Professional kayaker and Manager">
+
+        </div>
+
     </main>
 
     <footer>

@@ -1,0 +1,284 @@
+/* =========================================
+   1. ROOT VARIABLES
+========================================= */
+:root {
+    --primary-color: #FF6B35;
+    /* laranja pôr do sol */
+    --secondary-color: #004E89;
+    /* azul forte */
+    --accent1-color: #0A2239;
+    /* azul noite */
+    --accent2-color: #FFD38D;
+    /* amarelo pastel */
+    --heading-font: 'Nunito', sans-serif;
+    --body-font: 'Source Sans Pro', sans-serif;
+}
+
+/* =========================================
+   2. GLOBAL RESET & BASE
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+}
+
+header,
+main,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   3. TYPOGRAPHY
+========================================= */
+
+h1, h3 {
+    text-align: center;
+    font-family: var(--heading-font);
+    width: 100%;
+    display: block;
+}
+
+.address {
+    padding: 1rem;
+}
+
+/* =========================================
+   4. HEADER COMPONENT
+========================================= */
+
+section {
+    margin-top: 30px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    margin-left: 30px;
+}
+
+/* =========================================
+   5. NAVIGATION COMPONENT
+========================================= */
+nav {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    margin-left: 18px;
+}
+
+nav a {
+    text-align: center;
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 8px 12px;
+    font-weight: bold;
+    font-size: large;
+    background-color: white;
+    border-left: 1px solid var(--secondary-color);
+    width: 150px;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+/* =========================================
+   6. MAIN
+========================================= */
+
+/* Google Maps image */
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.map iframe {
+    width: 330px;
+    height: 300px;
+    margin: 1rem;
+    margin-left: 0;
+    margin-right: 40px;
+}
+
+/* Form */
+fieldset {
+    border: none; /* Remove border from the form */
+}
+
+form {
+    width: 400px;
+    font-size: small;
+}
+
+.item1, .item2 {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: center;
+    gap: 10px;
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+.item1 {
+    margin-bottom: 10px;
+}
+
+.item2 {
+    margin-bottom: 15px;
+}
+
+.item1 input {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.item1 ::placeholder {
+    padding: 10px;
+}
+
+.msg {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.msg label {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+/* --- CHECKBOX REDONDO --- */
+.msg input[type="checkbox"] {
+    appearance: none;         
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #333;
+    border-radius: 50%;       
+    margin-right: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* When selected - white background + black bullet point */
+.msg input[type="checkbox"]:checked {
+    background-color: white;
+    border-color: #333;
+}
+
+.msg input[type="checkbox"]:checked::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: black;      
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+.message {
+    display: grid;
+    grid-template-columns: auto;
+    margin-bottom: 2px;
+    gap: 2px;
+}
+
+.message ::placeholder {
+    padding-left: 6px;
+    padding-top: 2px;
+}
+
+.subscribe {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#subscribe {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+/* when selected: keep white background and black border */
+#subscribe:checked {
+    background-color: white;
+    border-color: black;
+}
+
+/* add check (✓) manually */
+#subscribe:checked::after {
+    content: "✓";
+    font-size: 10px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subscribe input {
+    margin-right: 5px;
+}
+
+button {
+    width: auto;
+    height: 30px;
+}
+
+/* =========================================
+   6. SOCIAL MEDIA COMPONENT
+========================================= */
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+/* =========================================
+   11. FOOTER COMPONENT
+========================================= */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem;
+}
