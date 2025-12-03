@@ -107,14 +107,15 @@ a:hover {
 /* Google Maps image */
 .container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 2px;
+    margin-bottom: 10px;
 }
 
 .map iframe {
     width: 330px;
     height: 300px;
-    margin: 1rem;
+    margin: 0;
     margin-left: 0;
     margin-right: 40px;
 }
@@ -143,7 +144,7 @@ form {
 }
 
 .item2 {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .item1 input {
