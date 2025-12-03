@@ -172,7 +172,7 @@ form {
     white-space: nowrap;
 }
 
-/* --- CHECKBOX REDONDO --- */
+/* --- ROUND CHECKBOX --- */
 .msg input[type="checkbox"] {
     appearance: none;         
     -webkit-appearance: none;
@@ -258,6 +258,41 @@ button {
     height: 30px;
 }
 
+/* employees profile */
+.employees {
+    border: 1px solid var(--accent1-color);
+    padding: 5px;
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.employees h1 {
+    font-family: var(--heading-font);
+    margin: 0;
+}
+
+.employees img {
+    width: 150px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.name, .job {
+    text-align: center;
+    font-family: var(--body-font);
+    width: 100%;
+}
+
+.name {
+    font-size: large;
+    font-weight: bold;
+}
+
 /* =========================================
    6. SOCIAL MEDIA COMPONENT
 ========================================= */
@@ -281,4 +316,19 @@ footer {
     background-color: var(--secondary-color);
     color: white;
     padding: 1rem;
+    margin-top: 20px;
+}
+
+footer a {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    width: auto !important;
+    display: inline-block;
+}
+
+footer img {
+    background: none;
+    border: none;
+    box-shadow: none;
 }
