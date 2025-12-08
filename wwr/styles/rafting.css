@@ -120,6 +120,65 @@ a:hover {
     margin-right: 40px;
 }
 
+/* Hero carousel */
+.hero-carousel {
+    overflow: hidden;
+}
+
+.hero-carousel .hero-slides {
+    display: flex;
+    width: 100%;
+    animation: slide 10s infinite;
+}
+
+.hero-carousel .hero-slides img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* Animação do Carousel */
+@keyframes slide {
+    0%   { transform: translateX(0); }
+    30%  { transform: translateX(0); }
+
+    35%  { transform: translateX(-100%); }
+    65%  { transform: translateX(-100%); }
+
+    70%  { transform: translateX(-200%); }
+    100% { transform: translateX(-200%); }
+}
+
+/* SEU ESTILO DE TEXTO SOBREPOSTO (igual ao seu) */
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.7;
+    background-color: var(--accent1-color);
+    color: #fff;
+}
+
+.hero article {
+    position: absolute;
+    top: 330px;
+    width: 96%;
+    text-align: justify;
+    padding: 5px 5px 0 5px;
+    color: #fff;
+    font-size: medium;
+    background-color: rgb(10 34 57 / 70%);
+}
+
+.hero article img {
+    width: 200px;
+    float: right;
+    margin: 0 0 1rem 1rem;
+    padding: 20px;
+}
+
 /* Form */
 fieldset {
     border: none; /* Remove border from the form */
