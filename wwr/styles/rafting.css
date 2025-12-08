@@ -128,7 +128,7 @@ a:hover {
 .hero-carousel .hero-slides {
     display: flex;
     width: 100%;
-    animation: slide 10s infinite;
+    animation: slide 5s infinite;
 }
 
 .hero-carousel .hero-slides img {
@@ -137,7 +137,7 @@ a:hover {
     flex-shrink: 0;
 }
 
-/* Animação do Carousel */
+/* Carousel Animation*/
 @keyframes slide {
     0%   { transform: translateX(0); }
     30%  { transform: translateX(0); }
@@ -149,7 +149,6 @@ a:hover {
     100% { transform: translateX(-200%); }
 }
 
-/* SEU ESTILO DE TEXTO SOBREPOSTO (igual ao seu) */
 .hero h1 {
     position: absolute;
     top: 20px;
