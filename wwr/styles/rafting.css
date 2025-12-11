@@ -278,7 +278,7 @@ a:hover {
 }
 
 /* =========================================
-   8. GENERAL FORM COMPONENTS
+   9. GENERAL FORM COMPONENTS
 ========================================= */
 form {
     width: 400px;
@@ -397,7 +397,7 @@ button {
 }
 
 /* =========================================
-   9. EMPLOYEES SECTION
+   10. EMPLOYEES SECTION
 ========================================= */
 .employees {
     border: 1px solid var(--accent1-color);
@@ -432,7 +432,7 @@ button {
 }
 
 /* =========================================
-   10. SOCIAL MEDIA
+   11. SOCIAL MEDIA
 ========================================= */
 .socialmedia a {
     text-decoration: none;
@@ -445,7 +445,7 @@ button {
 }
 
 /* =========================================
-   11. HERO (GENERIC)
+   12. HERO (GENERIC)
 ========================================= */
 .hero {
     position: relative;
@@ -494,7 +494,7 @@ button {
 }
 
 /* =========================================
-   12. HISTORY GRID
+   13. HISTORY GRID
 ========================================= */
 .history-grid {
     display: grid;
@@ -520,7 +520,7 @@ button {
 }
 
 /* =========================================
-   13. ADVENTURES
+   14. ADVENTURES
 ========================================= */
 .adventures {
     margin-top: 1rem;
@@ -546,7 +546,7 @@ button {
 }
 
 /* =========================================
-   14. FIGURES
+   15. FIGURES
 ========================================= */
 figure {
     text-align: center;
@@ -558,7 +558,7 @@ figcaption {
 }
 
 /* =========================================
-   15. FOOTER
+   16. FOOTER
 ========================================= */
 footer {
     display: flex;
@@ -582,3 +582,61 @@ footer img {
     border: none;
     box-shadow: none;
 }
+
+/* =========================================
+   17. CALL TO ACTION HERO
+========================================= */
+.call-action {
+    position: relative;
+}
+
+.call-action img {
+    width: 100%;
+    display: block;
+}
+
+.call-action h1 {
+    position: absolute;
+    font-size: 50px;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    padding: 16px;
+    text-align: center;
+    color: white;
+    font-family: 'Story Script';
+    text-shadow: 2px 2px 6px black;
+    z-index: 2;
+}
+
+.call-action a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 10px 20px;
+    background: var(--accent2-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bolder;
+    border-radius: 5px;
+    z-index: 2;
+    font-size: 20px;
+}
+
+.call-action a:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.call-action .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
