@@ -3,15 +3,11 @@
 ========================================= */
 :root {
     --primary-color: #FF6B35;
-    /* laranja pôr do sol */
     --secondary-color: #004E89;
-    /* azul forte */
     --accent1-color: #0A2239;
-    /* azul noite */
     --accent2-color: #FFD38D;
-    /* amarelo pastel */
     --heading-font: 'Nunito', sans-serif;
-    --body-font: 'Source Sans Pro', sans-serif;
+    --body-font: 'Source Sans Pro', sans-serif, 'Story Script', 'PT Sans Narrow', 'Roboto';
 }
 
 /* =========================================
@@ -28,18 +24,19 @@ body {
     color: var(--accent1-color);
 }
 
-header,
-main,
-footer {
+header, main, footer {
     max-width: 840px;
     margin: 0 auto;
+}
+
+main {
+    padding-top: 20px;
 }
 
 /* =========================================
    3. TYPOGRAPHY
 ========================================= */
-
-h1, h3 {
+h1, h2, h3 {
     text-align: center;
     font-family: var(--heading-font);
     width: 100%;
@@ -53,7 +50,6 @@ h1, h3 {
 /* =========================================
    4. HEADER COMPONENT
 ========================================= */
-
 section {
     margin-top: 30px;
 }
@@ -79,8 +75,8 @@ nav {
     background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
-    margin-bottom: 16px;
     margin-left: 18px;
+    margin-bottom: 16px;
 }
 
 nav a {
@@ -88,8 +84,8 @@ nav a {
     color: var(--secondary-color);
     text-decoration: none;
     padding: 8px 12px;
-    font-weight: bold;
     font-size: large;
+    font-weight: bold;
     background-color: white;
     border-left: 1px solid var(--secondary-color);
     width: 150px;
@@ -99,12 +95,11 @@ a:hover {
     color: var(--primary-color);
 }
 
-
 /* =========================================
-   6. MAIN
+   6. MAIN CONTENT
 ========================================= */
 
-/* Google Maps image */
+/* Google Maps */
 .container {
     display: flex;
     align-items: center;
@@ -115,41 +110,21 @@ a:hover {
 .map iframe {
     width: 330px;
     height: 300px;
-    margin: 0;
-    margin-left: 0;
     margin-right: 40px;
 }
 
-/* Hero carousel */
-.hero-carousel {
-    overflow: hidden;
+/* Hero Home */
+.hero-index {
+    position: relative;
 }
 
-.hero-carousel .hero-slides {
-    display: flex;
-    width: 100%;
-    animation: slide 5s infinite;
-}
-
-.hero-carousel .hero-slides img {
+.hero-index img {
+    display: block;
     width: 100%;
     height: auto;
-    flex-shrink: 0;
 }
 
-/* Carousel Animation*/
-@keyframes slide {
-    0%   { transform: translateX(0); }
-    30%  { transform: translateX(0); }
-
-    35%  { transform: translateX(-100%); }
-    65%  { transform: translateX(-100%); }
-
-    70%  { transform: translateX(-200%); }
-    100% { transform: translateX(-200%); }
-}
-
-.hero h1 {
+.hero-index h1 {
     position: absolute;
     top: 20px;
     width: 100%;
@@ -160,32 +135,159 @@ a:hover {
     color: #fff;
 }
 
-.hero article {
-    position: absolute;
-    top: 330px;
-    width: 96%;
-    text-align: justify;
-    padding: 5px 5px 0 5px;
+/* Text block */
+.index_p {
+    padding: 100px 20px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: var(--body-font);
+}
+
+/* Newsletter heading */
+.subscribe_h3 {
+    font-family: 'Story Script';
+    font-size: 30px;
+    color: var(--secondary-color);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================================
+   7. SUBSCRIBE FORM
+========================================= */
+.subscribe_index {
+    display: grid;
+    grid-template-columns: 325px 1fr;
+    gap: 50px;
+    padding: 10px;
+    color: black;
+    margin: 10px 0;
+    align-items: start;
+}
+
+.subscribe_index img {
+    width: 100%;
+    border-radius: 10%;
+    grid-column: 1 / 2;
+}
+
+.subscribe_index form {
+    grid-column: 2 / 4;
+    width: 100%;
+    font-size: 18px;
+}
+
+.subscribe_index form fieldset {
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.subscribe_index label {
+    font-weight: bold;
+}
+
+.subscribe_index input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.subscribe_button {
+    width: fit-content;
+    padding: 0px 16px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--secondary-color);
     color: #fff;
-    font-size: medium;
-    background-color: rgb(10 34 57 / 70%);
+    cursor: pointer;
 }
 
-.hero article img {
-    width: 200px;
-    float: right;
-    margin: 0 0 1rem 1rem;
-    padding: 20px;
+/* =========================================
+   8. INDEX SECTION
+========================================= */
+.wrapper {
+    width: 100%;
+    background-color: lightblue;
+    padding: 50px 0;
+    padding-left: 320px;
+    display: flex;
+
 }
 
-/* Form */
-fieldset {
-    border: none; /* Remove border from the form */
+.index_section {
+    position: relative;
 }
 
+/* Image */
+.index_section img {
+    width: 600px;
+    border-radius: 3px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Caixa Sobreposta */
+.index-box {
+    position: absolute;
+    top: 60%;
+    right: -280px;
+    transform: translateY(-50%);
+    background: var(--secondary-color);
+    color: white;
+    width: 400px;
+    height: 200px;
+    padding: 25px; 
+    border-radius: 5px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.index-box h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.index-box p {
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+    
+}
+
+.index-box .trips-btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 8px 16px;
+    background: var(--accent2-color);
+    color: black;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+}
+
+.index-box .trips-btn:hover {
+    background-color: var(--primary-color);
+}
+
+/* =========================================
+   8. GENERAL FORM COMPONENTS
+========================================= */
 form {
     width: 400px;
     font-size: small;
+}
+
+fieldset {
+    border: none;
 }
 
 .item1, .item2 {
@@ -197,18 +299,9 @@ form {
     margin-bottom: 10px;
 }
 
-.item1 {
-    margin-bottom: 10px;
-}
-
-.item2 {
-    margin-bottom: 10px;
-}
-
 .item1 input {
     width: 100%;
     height: 30px;
-    box-sizing: border-box;
 }
 
 .item1 ::placeholder {
@@ -219,43 +312,37 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-left: 0;
-    padding: 0;
 }
 
 .msg label {
     display: flex;
     align-items: center;
     gap: 5px;
-    margin: 0;
-    padding: 0;
     white-space: nowrap;
 }
 
-/* --- ROUND CHECKBOX --- */
+/* Custom round checkbox */
 .msg input[type="checkbox"] {
-    appearance: none;         
+    appearance: none;
     -webkit-appearance: none;
     width: 18px;
     height: 18px;
     border: 2px solid #333;
-    border-radius: 50%;       
-    margin-right: 8px;
+    border-radius: 50%;
     cursor: pointer;
+    margin-right: 8px;
     position: relative;
 }
 
-/* When selected - white background + black bullet point */
 .msg input[type="checkbox"]:checked {
     background-color: white;
-    border-color: #333;
 }
 
 .msg input[type="checkbox"]:checked::after {
     content: "";
     width: 8px;
     height: 8px;
-    background: black;      
+    background: black;
     border-radius: 50%;
     position: absolute;
     top: 3px;
@@ -264,8 +351,6 @@ form {
 
 .message {
     display: grid;
-    grid-template-columns: auto;
-    margin-bottom: 2px;
     gap: 2px;
 }
 
@@ -274,11 +359,7 @@ form {
     padding-top: 2px;
 }
 
-.subscribe {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
+/* Custom square checkbox */
 #subscribe {
     appearance: none;
     -webkit-appearance: none;
@@ -291,26 +372,24 @@ form {
     position: relative;
 }
 
-/* when selected: keep white background and black border */
-#subscribe:checked {
-    background-color: white;
-    border-color: black;
-}
-
-/* add check (✓) manually */
 #subscribe:checked::after {
     content: "✓";
     font-size: 10px;
     font-weight: bold;
-    color: black;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.subscribe input {
-    margin-right: 5px;
+.subscribe {
+    padding: 3px;
+} 
+
+.subscribe label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 button {
@@ -318,7 +397,9 @@ button {
     height: 30px;
 }
 
-/* employees profile */
+/* =========================================
+   9. EMPLOYEES SECTION
+========================================= */
 .employees {
     border: 1px solid var(--accent1-color);
     padding: 5px;
@@ -332,21 +413,18 @@ button {
 }
 
 .employees h2 {
-    font-family: var(--heading-font);
     margin: 0;
-    text-align: center;
 }
 
 .employees img {
     width: 150px;
-    display: inline-block;
     margin: 10px;
 }
 
 .name, .job {
     text-align: center;
-    font-family: var(--body-font);
     width: 100%;
+    font-family: var(--body-font);
 }
 
 .name {
@@ -355,7 +433,7 @@ button {
 }
 
 /* =========================================
-   6. SOCIAL MEDIA COMPONENT
+   10. SOCIAL MEDIA
 ========================================= */
 .socialmedia a {
     text-decoration: none;
@@ -368,16 +446,15 @@ button {
 }
 
 /* =========================================
-   7. HERO COMPONENT
+   11. HERO (GENERIC)
 ========================================= */
 .hero {
     position: relative;
 }
 
 .hero img {
-    display: block;
     width: 100%;
-    height: auto;
+    display: block;
 }
 
 .hero h1 {
@@ -394,25 +471,30 @@ button {
 .hero article {
     position: absolute;
     top: 330px;
+    left: 16px;
     width: 96%;
+    padding: 5px;
     text-align: justify;
-    padding: 5px 5px 0 5px;
-    color: #fff;
     font-size: medium;
+    color: #fff;
     background-color: rgb(10 34 57 / 70%);
+}
+
+.hero article p {
+    margin-top: 30px;
+    margin-left: 30px;
 }
 
 .hero article img {
     width: 200px;
-    height: auto;
-    display: block;
     float: right;
-    margin: 0 0 1rem 1rem;
+    align-items: center;
+    margin: 12px 0 1rem 1rem;
     padding: 20px;
 }
 
 /* =========================================
-   8. HISTORY GRID COMPONENT
+   12. HISTORY GRID
 ========================================= */
 .history-grid {
     display: grid;
@@ -422,19 +504,33 @@ button {
     padding: 1rem;
 }
 
+.history h2 {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 5px;
+}
+
 .history-grid img {
     width: 250px;
-    height: auto;
-    display: block;
     margin: 0 auto;
 }
 
+.history-grid p {
+    text-align: center;
+}
+
 /* =========================================
-   9. ADVENTURES COMPONENT
+   13. ADVENTURES
 ========================================= */
 .adventures {
-    margin-top: 2rem;
+    margin-top: 1rem;
     text-align: center;
+}
+
+.adventures h2 {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 5px;
 }
 
 .adventure-grid {
@@ -446,12 +542,11 @@ button {
 
 .adventure-grid img {
     width: 100%;
-    height: auto;
     border-radius: 4px;
 }
 
 /* =========================================
-   10. FIGURE COMPONENT
+   14. FIGURES
 ========================================= */
 figure {
     text-align: center;
@@ -463,7 +558,7 @@ figcaption {
 }
 
 /* =========================================
-   11. FOOTER COMPONENT
+   15. FOOTER
 ========================================= */
 footer {
     display: flex;
@@ -480,7 +575,6 @@ footer a {
     border: none !important;
     padding: 0 !important;
     width: auto !important;
-    display: inline-block;
 }
 
 footer img {
