@@ -214,9 +214,8 @@ a:hover {
     width: 100%;
     background-color: lightblue;
     padding: 50px 0;
-    padding-left: 320px;
+    padding-left: 210px;
     display: flex;
-
 }
 
 .index_section {
@@ -234,7 +233,7 @@ a:hover {
 .index-box {
     position: absolute;
     top: 60%;
-    right: -280px;
+    right: -250px;
     transform: translateY(-50%);
     background: var(--secondary-color);
     color: white;
@@ -457,9 +456,10 @@ button {
     display: block;
 }
 
-.hero h1 {
+.hero-h1 {
     position: absolute;
-    top: 20px;
+    top: -310px;
+    left: 1px;
     width: 100%;
     padding: 16px;
     text-align: center;
